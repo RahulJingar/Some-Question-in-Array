@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int linearSearch(int arr[],int size)
+{
+    int firstNumber=arr[0];
+    int secondLargestNumber=arr[0];
+    for(int i=0;i<size;i++)
+    {
+        if(arr[i]>firstNumber)
+        {
+            secondLargestNumber=firstNumber;
+            firstNumber=arr[i];
+        }
+        else if(arr[i]>secondLargestNumber)
+        {
+            secondLargestNumber=arr[i];
+        }
+    }
+    return secondLargestNumber;
+}
+int main()
+{
+    int arr[]={25, 10, 50, 35, 20};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    int ans = linearSearch(arr,size);
+    cout<<"Find the Second Largest Number in an Array:"<<ans;
+}
