@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int findMaximum(int arr[],int size)
+{
+    int max=arr[0];
+    for(int i=0;i<size;i++)
+    {
+        if(arr[i]>max)
+        {
+            max=arr[i];
+        }
+    }
+    return max;
+}
+int main()
+{
+    int arr[]={3, 5, 1, 9, 7,25,21};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    cout<<findMaximum(arr,size);
+}
